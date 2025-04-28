@@ -32,4 +32,21 @@ class CartController
             exit;
         }
     }
+    public function index()
+    {   require_once './App/Model/ProductModel.php';
+        $ProductModel=new ProductModel();
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+         }
+        $cartItems = [];
+        if(isset($_SESSION['cart'])){
+            foreach($_SESSION['cart'] as $item){
+                $product=$ProductModel->getProductById($item['product_id']);
+                $product['quantity']=$item['quantity'];
+                $cartItems[]=$product;
+            }
+        }
+        include './App/Views/Cart/index.php';
+    }
+
 }

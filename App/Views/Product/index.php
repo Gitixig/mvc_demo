@@ -25,9 +25,9 @@ include_once __DIR__ . "/../Layout/header.php";
                 ?>
                     <tr>
                         <td><?= $item['id'] ?></td>
-                        <td><?= $item['product_name'] ?></td>
-                        <td><?= $item['price'] ?></td>
-                        <td><?= $item['image'] ?></td>
+                        <td><?= $item['Name'] ?></td>
+                        <td><?= $item['Price'] ?></td>
+                        <td><?= $item['Image'] ?></td>
                         <td>
                         <form action="delete" method="POST">
                             <input type="hidden" 
