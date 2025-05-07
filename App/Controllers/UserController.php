@@ -53,7 +53,7 @@ class UserController
             $username = $_POST['username'];
             $password = $_POST['password'];
 
-            $pdo = new PDO("mysql:host=localhost;dbname=productdb", "root", "");
+            $pdo = new PDO("mysql:host=localhost;dbname=shop", "root", "");
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             $stmt = $pdo->prepare("SELECT * FROM users WHERE username = ?");
