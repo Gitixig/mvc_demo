@@ -5,7 +5,7 @@ return array(
     'assets' => '/ptit2402/mvc_demo/assets',
     'db' => array(
         'host'     => 'localhost',
-        'name'     => 'shop',
+        'name'     => 'shop1',
         'username' => 'root',
         'password' => ''
     )

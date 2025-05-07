@@ -30,7 +30,7 @@ if (session_status() === PHP_SESSION_NONE) {
                         <!-- Product actions-->
                         <div class="text-center mb-2"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
                             <form method="post" action="<?=$baseURL .'cart/add'?>">
-                                <input type="hidden" name="product_id" value="<?= $item['id'] ?>">
+                                <input type="hidden" name="product_id" value="<?= $item['Id'] ?>">
                                 <button type="submit" class="btn btn-primary btn-sm">Add to Cart</button>
                             </form>
                     </div>
